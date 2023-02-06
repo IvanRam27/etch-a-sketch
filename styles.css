@@ -1,0 +1,16 @@
+body {
+    margin: 0px;
+}
+
+#row {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.box {
+    margin: 0px;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+}
