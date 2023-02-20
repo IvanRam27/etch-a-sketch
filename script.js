@@ -17,4 +17,10 @@ function createGrid(height,width){
 
 createGrid(columns,rows);
 
+const boxes = document.querySelectorAll(".box");
+boxes.forEach(box => {
+    box.addEventListener("mouseover", function handleClick(event) {
+        box.setAttribute ("class", "hover")
+    })
+})
 

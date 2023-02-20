@@ -14,3 +14,11 @@ body {
     height: 30px;
     width: 30px;
 }
+
+.hover {
+    margin: 0px;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+}
