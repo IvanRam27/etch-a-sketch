@@ -1,5 +1,8 @@
 body {
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #row {
@@ -21,4 +24,10 @@ body {
     height: 30px;
     width: 30px;
     background-color: black;
+}
+
+button {
+    margin: 20px;
+    height: 30px;
+    font-weight: bold;
 }
