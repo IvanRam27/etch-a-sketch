@@ -1,14 +1,13 @@
-let columns = 16 //height
-let rows = 16     //width
+let size = 30
 
-function createGrid(height,width){
-    for (let i = 0; i < width; i++) {        
+function createGrid(gridSize){
+    for (let i = 0; i < gridSize; i++) {        
         const square = document.createElement("square"); 
         square.classList.add("box");
         document.getElementById("row").appendChild(square);
     }
 
-    for(let i = 0; i < height; i++){
+    for(let i = 0; i < gridSize; i++){
     const p = document.getElementById("row")
     const clone = p.cloneNode(true);
     document.getElementById("column").appendChild(clone);
@@ -17,12 +16,12 @@ function createGrid(height,width){
     const boxes = document.querySelectorAll(".box");
 boxes.forEach(box => {
     box.addEventListener("mouseover", function handleClick(event) {
-        box.setAttribute ("class", "hover")
+        box.style.backgroundColor = "black";
     })
 })
 }
 
-createGrid(columns,rows); //starting grid
+createGrid(size); //starting grid
 
 
 
@@ -36,7 +35,11 @@ function changeGrid(){  //function to create new grid when "change grid" button 
         hover.remove();
     })
 
-    columns = prompt("Height (Max. 100)")
-    rows = prompt("Width (Max. 100)")
-    createGrid(columns,rows); 
+    size = prompt("Enter Grid Size (Max. 100)")
+    while (isNaN(size) || size < 0 || size > 100) {
+        size = prompt("Invalid number! please enter a number between 0 and 100")
+    }
+    
+    
+    createGrid(size); 
 }

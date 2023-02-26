@@ -3,27 +3,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
+
+#column {
+    max-width: 600px;
+    max-width: 600px;
+}
+
 
 #row {
     display: flex;
     flex-direction: row;
-
+    
 }
 
 .box {
     margin: 0px;
     border: 1px solid black;
-    height: 30px;
-    width: 30px;
-}
-
-.hover {
-    margin: 0px;
-    border: 1px solid black;
-    height: 30px;
-    width: 30px;
-    background-color: black;
+    height: 15px;
+    width: 15px; 
 }
 
 button {
