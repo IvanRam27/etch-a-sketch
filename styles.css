@@ -2,27 +2,29 @@ body {
     margin: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: center;  
 }
+
 
 #column {
-    max-width: 600px;
-    max-width: 600px;
+    display: flex;
+    height: 700px; 
+    flex-direction: column;
 }
 
-
 #row {
-    display: flex;
-    flex-direction: row;
-    
+    display: flex; 
+    width: 700px;
+    height: 700px;
 }
 
 .box {
     margin: 0px;
     border: 1px solid black;
     height: 15px;
-    width: 15px; 
+    width: 15px;
+    flex-grow: 1; 
+    
 }
 
 button {
