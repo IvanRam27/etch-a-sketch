@@ -25,7 +25,7 @@ function createGrid(gridSize){
 
 
     const boxes = document.querySelectorAll(".box");
-boxes.forEach(box => {
+    boxes.forEach(box => {
     box.addEventListener("mouseover", function handleClick(event) {
         box.style.backgroundColor = "black";
     })

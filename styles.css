@@ -21,7 +21,7 @@ body {
 .box {
     margin: 0px;
     border: 1px solid black;
-    height: 15px;
+    height: auto;
     width: 15px;
     flex-grow: 1; 
     
