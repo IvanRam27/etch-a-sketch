@@ -26,10 +26,25 @@ function createGrid(gridSize){
 
     const boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
-    box.addEventListener("mouseover", function handleClick(event) {
+    box.addEventListener("mousedown", function handleClick() {
         box.style.backgroundColor = "black";
+
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+        box.addEventListener("mouseover", function mouseOver(){
+            box.style.backgroundColor = "black";
+
+        box.addEventListener("mouseup", box.removeEventListener("mouseover", mouseOver))
+            
+        })
+
     })
-})
+
+
+
+    })
+
+    })
 }
 
 createGrid(size); //starting grid
