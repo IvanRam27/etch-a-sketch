@@ -3,19 +3,19 @@ let size = 30
 function createGrid(gridSize){
 
     for (let i = 0; i < gridSize; i++) {        //append boxes to first row
-        const square = document.createElement("square"); 
+        const square = document.createElement("div"); 
         square.classList.add("box");
         document.getElementById("row").appendChild(square);
     }
     
     for(let i= 1; i < gridSize; i++){
 
-        const row = document.createElement("row") //append empty rows to fill with boxes
+        const row = document.createElement("div") //append empty rows to fill with boxes
         row.id = "row";
         document.getElementById("column").prepend(row)
     
     for (let i = 0; i < gridSize; i++) {        //append boxes to columns
-        const square = document.createElement("square"); 
+        const square = document.createElement("div"); 
         square.classList.add("box");
         document.getElementById("row").appendChild(square);
     }
@@ -23,27 +23,24 @@ function createGrid(gridSize){
 
     }
 
+    let isMouseDown = false;
 
     const boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
-    box.addEventListener("mousedown", function handleClick() {
+    box.addEventListener("mousedown", function handleClick() { // add event listeners to change box color
+        isMouseDown = true; 
         box.style.backgroundColor = "black";
+    });
 
-    const boxes = document.querySelectorAll(".box");
-    boxes.forEach(box => {
-        box.addEventListener("mouseover", function mouseOver(){
-            box.style.backgroundColor = "black";
-
-        box.addEventListener("mouseup", box.removeEventListener("mouseover", mouseOver))
-            
-        })
-
-    })
-
-
-
-    })
-
+    box.addEventListener("mouseover", function mouseOver(){
+        if(isMouseDown){
+        box.style.backgroundColor = "black";
+        }   
+        });
+    box.addEventListener("mouseup", function(){
+        isMouseDown = false;
+    });
+    
     })
 }
 
